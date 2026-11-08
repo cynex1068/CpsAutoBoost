@@ -1,0 +1,71 @@
+name: Build CpsAutoBoost
+
+on:
+  push:
+    branches: [ "main" ]
+    tags:
+      - "v*"
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  PROJECT_PATH: WindowsCpsTool.csproj
+  PUBLISH_DIR: publish
+
+jobs:
+  build:
+    name: Build win-x64
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore $env:PROJECT_PATH
+
+      - name: Publish self-contained single EXE
+        run: >-
+          dotnet publish $env:PROJECT_PATH
+          --configuration Release
+          --runtime win-x64
+          --self-contained true
+          --output $env:PUBLISH_DIR
+          /p:PublishSingleFile=true
+          /p:IncludeNativeLibrariesForSelfExtract=true
+          /p:EnableCompressionInSingleFile=true
+          /p:DebugType=None
+          /p:DebugSymbols=false
+
+      - name: Verify EXE exists
+        shell: pwsh
+        run: |
+          $exe = Join-Path $env:PUBLISH_DIR "WindowsCpsTool.exe"
+          if (-not (Test-Path $exe)) {
+            throw "Build output not found: $exe"
+          }
+          Get-Item $exe | Format-List FullName,Length
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WindowsCpsTool-win-x64
+          path: publish/WindowsCpsTool.exe
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Create GitHub Release for version tag
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: publish/WindowsCpsTool.exe
+          generate_release_notes: true
