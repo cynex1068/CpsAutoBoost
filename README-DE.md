@@ -1,6 +1,6 @@
 # CPS AUTO BOOST
 
-[English](README-EN.md) | **Deutsch**
+[English](README.md) | **Deutsch**
 
 **CPS AUTO BOOST** ist ein Windows-Desktop-Tool, das die Mausklickausgabe basierend auf echten physischen Klicks pro Sekunde automatisch erhöht.
 
