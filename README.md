@@ -24,8 +24,8 @@ It monitors physical left and right mouse clicks globally, calculates the real C
 
 | Button | Activation condition | Default multiplier | Default result |
 | --- | ---: | ---: | ---: |
-| Left | `x >= 5` | `2x` | `y = 2x` |
-| Right | `x >= 4` | `3x` | `y = 3x` |
+| Left | x >= 5 | 2x | y = 2x |
+| Right | x >= 4 | 3x | y = 3x |
 
 The activation conditions and multipliers can be changed directly in the application.
 
