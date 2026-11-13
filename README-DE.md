@@ -24,8 +24,8 @@ Es überwacht global die physischen Klicks der linken und rechten Maustaste, ber
 
 | Taste | Aktivierungsbedingung | Standard-Multiplikator | Standardergebnis |
 | --- | ---: | ---: | ---: |
-| Links | `x >= 5` | `2x` | `y = 2x` |
-| Rechts | `x >= 4` | `3x` | `y = 3x` |
+| Links | x >= 5 | 2x | y = 2x |
+| Rechts | x >= 4 | 3x | y = 3x |
 
 Die Aktivierungsbedingungen und Multiplikatoren können direkt in der Anwendung geändert werden.
 
