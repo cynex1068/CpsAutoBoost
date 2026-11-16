@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Windows.Forms;
 
-namespace WindowsCpsTool;
+namespace CpsAutoBoost;
 
 internal sealed class MainForm : Form
 {
