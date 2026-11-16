@@ -1,6 +1,6 @@
 using System.Windows.Forms;
 
-namespace WindowsCpsTool;
+namespace CpsAutoBoost;
 
 internal static class Program
 {
