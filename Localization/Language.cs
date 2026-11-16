@@ -1,4 +1,4 @@
-namespace WindowsCpsTool;
+namespace CpsAutoBoost;
 
 enum AppLanguage
 {
