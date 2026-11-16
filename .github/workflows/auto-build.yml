@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 env:
-  PROJECT_PATH: WindowsCpsTool.csproj
+  PROJECT_PATH: CpsAutoBoost.csproj
   PUBLISH_DIR: publish
 
 jobs:
@@ -49,7 +49,7 @@ jobs:
       - name: Verify EXE exists
         shell: pwsh
         run: |
-          $exe = Join-Path $env:PUBLISH_DIR "WindowsCpsTool.exe"
+          $exe = Join-Path $env:PUBLISH_DIR "CpsAutoBoost.exe"
           if (-not (Test-Path $exe)) {
             throw "Build output not found: $exe"
           }
@@ -58,7 +58,7 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: WindowsCpsTool-win-x64
+          name: CpsAutoBoost-win-x64
           path: publish/WindowsCpsTool.exe
           if-no-files-found: error
           retention-days: 30
@@ -67,5 +67,5 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: publish/WindowsCpsTool.exe
+          files: publish/CpsAutoBoost.exe
           generate_release_notes: true
