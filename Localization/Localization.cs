@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace WindowsCpsTool;
+namespace CpsAutoBoost;
 
 static class Localization
 {
