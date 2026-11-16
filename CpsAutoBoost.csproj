@@ -5,8 +5,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>WindowsCpsTool</AssemblyName>
-    <RootNamespace>WindowsCpsTool</RootNamespace>
+    <AssemblyName>CpsAutoBoost</AssemblyName>
+    <RootNamespace>CpsAutoBoost</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Platforms>x64</Platforms>
   </PropertyGroup>
