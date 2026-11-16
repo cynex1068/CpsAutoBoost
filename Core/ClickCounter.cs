@@ -1,4 +1,4 @@
-namespace WindowsCpsTool;
+namespace CpsAutoBoost;
 
 internal sealed class ClickCounter
 {
