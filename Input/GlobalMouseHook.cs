@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace WindowsCpsTool;
+namespace CpsAutoBoost;
 
 enum MouseButton
 {
