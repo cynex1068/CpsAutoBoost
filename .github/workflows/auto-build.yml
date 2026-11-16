@@ -59,7 +59,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: CpsAutoBoost-win-x64
-          path: publish/WindowsCpsTool.exe
+          path: publish/CpsAutoBoost.exe
           if-no-files-found: error
           retention-days: 30
 
