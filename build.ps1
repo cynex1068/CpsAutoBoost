@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-$project = Join-Path $PSScriptRoot 'WindowsCpsTool.csproj'
+$project = Join-Path $PSScriptRoot 'CpsAutoBoost.csproj'
 $out = Join-Path $PSScriptRoot 'publish'
 
 if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
@@ -8,4 +8,4 @@ if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
 
 if (Test-Path $out) { Remove-Item $out -Recurse -Force }
 dotnet publish $project -c Release -r win-x64 --self-contained true -o $out
-Write-Host "Done: $out\WindowsCpsTool.exe" -ForegroundColor Green
+Write-Host "Done: $out\CpsAutoBoost.exe" -ForegroundColor Green
