@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace WindowsCpsTool;
+namespace CpsAutoBoost;
 
 static class MouseSimulator
 {
