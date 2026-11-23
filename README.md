@@ -91,6 +91,8 @@ publish\WindowsCpsTool.exe
 
 CPS AUTO BOOST only sends mouse input after the feature is enabled. Closing the application removes the global mouse hook and stops automatic input.
 
+Never use this tool to cheat on public servers or in games where a high CPS provides an advantage!
+
 ## License
 
 This project is licensed under the **MIT License**.
