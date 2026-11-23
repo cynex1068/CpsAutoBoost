@@ -91,6 +91,8 @@ publish\WindowsCpsTool.exe
 
 CPS AUTO BOOST sendet Mauseingaben erst, nachdem die Funktion aktiviert wurde. Beim Schließen der Anwendung wird der globale Maus-Hook entfernt und die automatische Eingabe gestoppt.
 
+Verwende dieses Tool niemals, um auf öffentlichen Servern oder in Spielen zu schummeln, in denen eine hohe CPS einen Vorteil verschafft!
+
 ## Lizenz
 
 Dieses Projekt ist unter der **MIT-Lizenz** lizenziert.
